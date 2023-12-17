@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://nj5bxmmogxnd"]
+
+[ext_resource type="Script" path="res://Scripts/Test.cs" id="1_l200x"]
+[ext_resource type="TileSet" uid="uid://chxkxh3qsd5we" path="res://TileSet/Default.tres" id="2_rusvl"]
+[ext_resource type="Texture2D" uid="uid://cb4tsmypyiwrj" path="res://Sprites/Pieces/Pawn.png" id="3_moaff"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ivkne"]
+load_path = "res://.godot/imported/grid.png-3a7b82a00561fab946516f9cc79c4550.ctex"
+
+[node name="Scene" type="Node2D"]
+script = ExtResource("1_l200x")
+
+[node name="Game" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="Game"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Game"]
+texture_filter = 1
+position = Vector2(332, 188)
+scale = Vector2(2, 2)
+texture = SubResource("CompressedTexture2D_ivkne")
+
+[node name="TileMap" type="TileMap" parent="Game"]
+texture_filter = 1
+tile_set = ExtResource("2_rusvl")
+format = 2
+layer_0/tile_data = PackedInt32Array(65538, 65536, 0, 2, 0, 0, -65534, 65536, 0, -131070, 0, 0, 65537, 0, 0, 1, 65536, 0, -65535, 0, 0, -131071, 65536, 0, 65536, 65536, 0, 0, 0, 0, -65536, 65536, 0, -131072, 0, 0, 131071, 0, 0, 65535, 65536, 0, 131070, 65536, 0, 65534, 0, 0, 131069, 0, 0, 65533, 65536, 0, -3, 0, 0, -65539, 65536, 0, -65538, 0, 0, -2, 65536, 0, -65537, 65536, 0, -1, 0, 0, -196611, 65536, 0, -131075, 0, 0, -196610, 0, 0, -131074, 65536, 0, -196609, 65536, 0, -131073, 0, 0, -262144, 0, 0, -196608, 65536, 0, -262143, 65536, 0, -196607, 0, 0, -262142, 0, 0, -196606, 65536, 0, 196605, 65536, 0, 262141, 0, 0, 196606, 0, 0, 262142, 65536, 0, 196607, 65536, 0, 262143, 0, 0, 131072, 0, 0, 196608, 65536, 0, 131073, 65536, 0, 196609, 0, 0, 131074, 0, 0, 196610, 65536, 0, 327677, 65536, 0, 393213, 0, 0, 327678, 0, 0, 393214, 65536, 0, 327679, 65536, 0, 393215, 0, 0, 262144, 0, 0, 327680, 65536, 0, 262145, 65536, 0, 327681, 0, 0, 262146, 0, 0, 327682, 65536, 0, -327683, 65536, 0, -262147, 0, 0, -327682, 0, 0, -262146, 65536, 0, -327681, 65536, 0, -262145, 0, 0, -393216, 0, 0, -327680, 65536, 0, -393215, 65536, 0, -327679, 0, 0, -393214, 0, 0, -327678, 65536, 0)
+
+[node name="Pawn" type="Sprite2D" parent="Game"]
+position = Vector2(-211, 40)
+texture = ExtResource("3_moaff")

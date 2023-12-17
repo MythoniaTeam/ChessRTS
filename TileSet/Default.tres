@@ -1,0 +1,19 @@
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://chxkxh3qsd5we"]
+
+[ext_resource type="Texture2D" uid="uid://brs5ut5kml4vv" path="res://Sprites/Grid.png" id="1_077yn"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_2trqs"]
+tile_data = PackedInt32Array(0, 65536, 0, 65536, 0, 0, 1, 0, 0, 65537, 65536, 0)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ivfj"]
+texture = ExtResource("1_077yn")
+texture_region_size = Vector2i(140, 120)
+0:0/0 = 0
+0:0/0/terrain = 1
+1:0/0 = 0
+1:0/0/terrain = 1
+
+[resource]
+tile_size = Vector2i(140, 120)
+sources/0 = SubResource("TileSetAtlasSource_3ivfj")
+pattern_0 = SubResource("TileMapPattern_2trqs")
